@@ -11,7 +11,6 @@ class CreateCategoryController {
     try {
       this.createCategoryUseCase.execute({ name, description });
     } catch (error) {
-      console.log(typeof error);
       return response.status(400).send(error);
     }
 
