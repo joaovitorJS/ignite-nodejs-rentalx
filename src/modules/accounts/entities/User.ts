@@ -26,6 +26,13 @@ class User {
 
   @CreateDateColumn()
   created_at: Date;
+
+  constructor() {
+    /* Iniciando o id */
+    if (!this.id) {
+      this.id = uuidV4();
+    }
+  }
 }
 
 export { User };
